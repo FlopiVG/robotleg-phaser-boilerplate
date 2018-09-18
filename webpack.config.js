@@ -19,6 +19,11 @@ module.exports = {
             presets: ["@babel/typescript"]
           }
         }
+      },
+      {
+        test: /\.ts$/,
+        enforce: "pre",
+        loader: "tslint-loader"
       }
     ]
   },
