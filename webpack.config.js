@@ -14,10 +14,7 @@ module.exports = {
       {
         test: /\.ts$/,
         use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/typescript"]
-          }
+          loader: "babel-loader"
         }
       },
       {
