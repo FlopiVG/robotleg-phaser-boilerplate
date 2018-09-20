@@ -1,20 +1,22 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: path.resolve(__dirname, "src/index.ts"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   mode: "development",
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: {
-          loader: "babel-loader"
+          loader: "ts-loader"
         }
       },
       {
@@ -26,6 +28,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./public/index.html" }),
-    new SWPrecacheWebpackPlugin()
-  ]
+    new SWPrecacheWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      Phaser: "phaser"
+    })
+  ],
+  resolve: {
+    extensions: [".ts", ".js", ".json"]
+  }
 };

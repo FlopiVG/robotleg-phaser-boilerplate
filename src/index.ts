@@ -1,5 +1,11 @@
-const msg: string = 'Hello Robotleg and Phaser'
+/// <reference path="../node_modules/@robotlegsjs/phaser/definitions/phaser.d.ts" />
+import 'reflect-metadata'
 
-console.log(msg)
+import { Game } from './Game'
 
-export default msg
+(window as any).initGame = (function () {
+  let game: Game = new Game();
+  (window as any).game = game
+})()
+
+export default window
