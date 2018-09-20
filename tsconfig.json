@@ -4,6 +4,8 @@
     "target": "esnext",
     "module": "commonjs",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "strict": true,
+    "strictPropertyInitialization": false
   }
 }

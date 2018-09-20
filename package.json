@@ -34,7 +34,6 @@
   "scripts": {
     "start:dev": "webpack-dev-server",
     "build": "webpack",
-    "debug": "webpack-dev-server --inspect-brk=9229",
     "test": "jest"
   },
   "author": "FlopiVG",

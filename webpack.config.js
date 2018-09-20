@@ -23,7 +23,10 @@ module.exports = {
       {
         test: /\.ts$/,
         enforce: "pre",
-        loader: "tslint-loader"
+        loader: "tslint-loader",
+        options: {
+          typeCheck: true
+        }
       }
     ]
   },
