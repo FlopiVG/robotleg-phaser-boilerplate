@@ -30,8 +30,8 @@
     "webpack-dev-server": "^3.1.8"
   },
   "scripts": {
-    "start:dev": "webpack-dev-server",
-    "build": "webpack",
+    "start:dev": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
     "test": "jest"
   },
   "author": "FlopiVG",
