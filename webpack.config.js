@@ -1,5 +1,4 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const webpack = require("webpack");
@@ -31,8 +30,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./public/index.html" }),
-    new CopyWebpackPlugin([{ from: "public/assets", to: "assets" }]),
+    new CopyWebpackPlugin([{ from: "public" }]),
     new SWPrecacheWebpackPlugin(),
     new webpack.ProvidePlugin({
       Phaser: "phaser"
