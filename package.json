@@ -4,10 +4,10 @@
   "description": "Robotleg with phaser boilerplate",
   "main": "index.js",
   "dependencies": {
-    "@robotlegsjs/core": "^0.2.1",
-    "@robotlegsjs/phaser": "^0.4.0",
     "phaser": "^3.19.0",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "@robotlegsjs/core": "^1.0.2",
+    "@robotlegsjs/phaser": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
