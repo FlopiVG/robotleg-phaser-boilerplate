@@ -16,14 +16,6 @@ module.exports = {
         use: {
           loader: "ts-loader"
         }
-      },
-      {
-        test: /\.ts$/,
-        enforce: "pre",
-        loader: "tslint-loader",
-        options: {
-          typeCheck: true
-        }
       }
     ]
   },

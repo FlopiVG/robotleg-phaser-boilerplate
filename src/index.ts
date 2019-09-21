@@ -1,11 +1,11 @@
 /// <reference path="../node_modules/@robotlegsjs/phaser/definitions/phaser.d.ts" />
-import 'reflect-metadata'
+import "reflect-metadata";
 
-import { Game } from './Game'
+import { Game } from "./Game";
 
-(window as any).initGame = (function () {
+(window as any).initGame = (function() {
   let game: Game = new Game();
-  (window as any).game = game
-})()
+  (window as any).game = game;
+})();
 
-export default window
+export default window;

@@ -1,14 +1,14 @@
-import { injectable } from '@robotlegsjs/core'
+import { injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class GameModel {
-  public robotlegsScore: number
+  public robotlegsScore: number;
 
-  constructor () {
-    this.clear()
+  constructor() {
+    this.clear();
   }
 
-  public clear (): void {
-    this.robotlegsScore = 0
+  public clear(): void {
+    this.robotlegsScore = 0;
   }
 }
