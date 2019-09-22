@@ -1,7 +1,8 @@
 module.exports = {
+  roots: ["<rootDir>/src"],
   transform: {
     "^.+\\.tsx?$": "ts-jest"
   },
-  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-  moduleFileExtensions: ["ts", "js"]
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+  setupFiles: ["jest-canvas-mock"]
 };

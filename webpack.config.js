@@ -1,7 +1,6 @@
 const path = require("path");
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/index.ts"),
@@ -21,10 +20,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([{ from: "public" }]),
-    new SWPrecacheWebpackPlugin(),
-    new webpack.ProvidePlugin({
-      Phaser: "phaser"
-    })
+    new SWPrecacheWebpackPlugin()
   ],
   resolve: {
     extensions: [".ts", ".js", ".json"]

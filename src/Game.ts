@@ -1,3 +1,4 @@
+import Phaser from "phaser";
 import { IContext, Context, MVCSBundle } from "@robotlegsjs/core";
 import { ContextSceneManager, PhaserBundle } from "@robotlegsjs/phaser";
 import { SceneMediatorConfig } from "./config/SceneMediatorConfig";
